@@ -17,9 +17,9 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-#TARGET_CPU_SMP := true
+TARGET_CPU_SMP := true
 
-#ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
 
 BOARD_KERNEL_CMDLINE := 
 BOARD_KERNEL_BASE := 0x10000000
@@ -71,7 +71,7 @@ TARGET_RECOVERY_INITRC := device/lenovo/x5001/twrp.init.rc
 TARGET_PREBUILT_KERNEL := device/lenovo/x5001/kernel
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun0/file
 
-#twrp0000000000000000
+#twrp
 DEVICE_RESOLUTION := 1080x1920
 #RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true 

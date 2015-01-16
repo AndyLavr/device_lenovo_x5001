@@ -21,4 +21,4 @@ $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_x5001
-PRODUCT_DEVICE := x5001
+PRODUCT_DEVICE := X5001

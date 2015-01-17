@@ -1,3 +1,6 @@
+# USE https://github.com/gordon0001/mtk-tools TO CREATE AN RECOVERY IMAGE. USE THE KERNEL FROM device/lenovo/x5001/kernel
+# AND USE THE RAMDISK FROM out/target/product/x5001/recovery/root/
+
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version

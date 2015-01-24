@@ -86,6 +86,7 @@ TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brigh
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_MAX_BRIGHTESS := 100 
 TW_DISABLE_TTF := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 #TW_NO_USB_STORAGE := true
 #TW_NO_SCREEN_BLANK := true
 #TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"

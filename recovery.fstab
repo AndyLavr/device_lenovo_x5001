@@ -1,21 +1,23 @@
-# mount point	fstype    device    	[device2]
-
-#/boot       mtd         boot
-#/cache      yaffs2      cache
-#/data       yaffs2      userdata
-#/misc       mtd         misc
-#/recovery   mtd         recovery
-#/sdcard     vfat        /dev/block/mmcblk0p1        /dev/block/mmcblk0
-#/system     yaffs2      system
-#/sd-ext     ext4        /dev/block/mmcblk0p2
-
-/boot        emmc    /dev/bootimg flags=backup=1
-/recovery    emmc    /dev/recovery flags=backup=1
-/uboot       emmc    /dev/uboot       flags=display="uboot";backup=1
-/nvram       emmc    /dev/nvram       flags=display="nvram";backup=1
-/cache       ext4    /emmc@cache
-/data        ext4    /emmc@usrdata
 /system      ext4    /emmc@android
-#/sdcard      vfat    /dev/block/mmcblk1p1    /dev/block/mmcblk1
-/external_sd vfat //dev/block/mmcblk1p1 flags=display="External Storage";removable;storage
-/sd-ext auto /dev/block/mmcblk1p2 flags=display="SD-Ext";removable;storage
+/data        ext4    /emmc@usrdata
+/cache       ext4    /emmc@cache
+/boot        emmc    /dev/bootimg	flags=backup=1
+/recovery    emmc    /dev/recovery	flags=backup=1
+#/sdcard      vfat    /dev/null
+/external_sd vfat /dev/block/mmcblk1p1 flags=display="External Storage";removable;storage
+/sd-ext auto /dev/block/mmcblk1p2 flags=display="SD-EXT";removable;storage
+
+#/preloader	 emmc	/dev/misc-sd flags=backup=1;length=262144
+/mbr		 emmc	/dev/mbr flags=backup=1
+/ebr1		 emmc 	/dev/ebr1 flags=backup=1
+/pro_info	 emmc	/dev/pro_info flags=backup=1
+/nvram       emmc    /dev/nvram	flags=backup=1
+/protect_f	 emmc	/dev/block/mmcblk0p2 flags=backup=1
+/protect_s	 emmc	/dev/block/mmcblk0p3 flags=backup=1
+/seccfg		 emmc	/dev/seccfg flags=backup=1
+/uboot       emmc    /dev/uboot	flags=backup=1
+/sec_ro		 emmc	/dev/block/mmcblk0p4 flags=backup=1
+/misc 		 emmc 	/dev/misc flags=backup=1
+/logo		 emmc	/dev/logo flags=backup=1
+/expdb		 emmc	/dev/expdb flags=backup=1
+#/bmtpool	 emmc 	/dev/bmtpool
